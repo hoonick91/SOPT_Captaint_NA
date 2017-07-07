@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="339dp"
+        android:layout_height="275dp"
+        android:background="@drawable/event_popup"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:id="@+id/daybox1"
+            android:layout_width="136dp"
+            android:layout_height="57dp"
+            android:layout_marginLeft="31dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/popup_day_box1">
+
+            <TextView
+                android:id="@+id/fromday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:textColor="#ffffff"
+                android:text=""
+                android:textSize="11dp"/>
+
+            <TextView
+                android:id="@+id/fromtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fromday"
+                android:layout_centerInParent="true"
+                android:textColor="#ffffff"
+                android:text=""
+                android:textSize="16dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/daybox2"
+            android:layout_width="138dp"
+            android:layout_height="57dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/daybox1"
+            android:background="@drawable/popup_day_box2">
+
+            <TextView
+                android:id="@+id/today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:textColor="#638da6"
+                android:text="\"
+                android:textSize="11dp"/>
+
+            <TextView
+                android:id="@+id/totime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/today"
+                android:layout_centerInParent="true"
+                android:textColor="#638da6"
+                android:text=""
+                android:textSize="16dp"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/canceldate"
+            android:layout_width="140dp"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="21dp">
+
+            <TextView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="취소" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/submitdate"
+            android:layout_width="140dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="21dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="25dp">
+
+            <TextView
+
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="확인"
+                android:textColor="#638da6"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="317dp"
+            android:layout_height="108dp"
+            android:layout_above="@+id/submitdate"
+            android:layout_below="@+id/daybox1"
+            android:orientation="horizontal">
+
+            <org.sopt.captainna.dialog.DatePickerTheme
+                android:id="@+id/date"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/daybox1"
+                android:layout_marginLeft="-10dp"
+                android:scaleX="0.7"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:theme="@android:style/Theme.Holo.Light" />
+
+            <org.sopt.captainna.dialog.TimePickerTheme
+                android:id="@+id/time"
+                android:layout_weight="6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/daybox2"
+                android:layout_toRightOf="@+id/date"
+                android:layout_marginLeft="-70dp"
+                android:layout_marginRight="-30dp"
+                android:scaleX="0.7"
+                android:theme="@android:style/Theme.Holo.Light"
+                android:timePickerMode="spinner" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

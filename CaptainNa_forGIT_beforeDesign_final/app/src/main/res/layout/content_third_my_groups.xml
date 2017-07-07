@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="28dp"
+    android:orientation="vertical">
+
+    <!--첫번째 줄-->
+    <RelativeLayout
+        android:layout_width="304dp"
+        android:layout_height="97dp"
+        android:layout_marginLeft="28dp">
+
+
+        <!--첫번째 item-->
+        <RelativeLayout
+            android:id="@+id/item0111"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <!--모임 사진-->
+            <RelativeLayout
+                android:id="@+id/llgroupImg0111"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="66dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/group_photo_outline"/>
+
+                <ImageView
+                    android:layout_width="66dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/group_default_home"/>
+
+
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivGroupImg0111"
+                    android:layout_width="66dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/group_default_home" />
+            </RelativeLayout>
+
+            <!--모임명-->
+            <LinearLayout
+                android:id="@+id/llgroupName0111"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llgroupImg0111"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="11dp">
+
+                <TextView
+                    android:id="@+id/tvGroupName0111"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="#191919"
+                    android:textSize="11sp"
+                    tools:text="SOPT" />
+            </LinearLayout>
+
+            <!--빨간점-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="4dp">
+
+                <ImageView
+                    android:id="@+id/ivRed0111"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/group_new" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!--첫번째 플러스-->
+        <RelativeLayout
+            android:id="@+id/rlPlus0111"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:visibility="gone">
+            <!--플러스 버튼-->
+            <LinearLayout
+                android:id="@+id/plus0111"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:src="@drawable/group_plus" />
+            </LinearLayout>
+            <!--빈 모임명-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/plus0111"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="11dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="#191919"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </RelativeLayout>
+        <!--첫번째 플러스 끝-->
+
+
+        <!--두번재 item-->
+        <RelativeLayout
+            android:id="@+id/item0222"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+
+            <!--모임 사진-->
+            <RelativeLayout
+                android:id="@+id/llgroupImg0222"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="66dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/group_photo_outline"/>
+                <ImageView
+                    android:layout_width="66dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/group_default_home"/>
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivGroupImg0222"
+                    android:layout_width="66dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/group_default_image" />
+            </RelativeLayout>
+
+            <!--모임명-->
+            <LinearLayout
+                android:id="@+id/llgroupName0222"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llgroupImg0222"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="11dp">
+
+                <TextView
+                    android:id="@+id/tvGroupName0222"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="#191919"
+                    android:textSize="11sp"
+                    tools:text="BOUNCE" />
+            </LinearLayout>
+
+            <!--빨간점-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="4dp">
+
+                <ImageView
+                    android:id="@+id/ivRed0222"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/group_new" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!--두번째 플러스-->
+        <RelativeLayout
+            android:id="@+id/rlPlus0222"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+            <!--플러스 버튼-->
+            <LinearLayout
+                android:id="@+id/plus0222"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:src="@drawable/group_plus" />
+            </LinearLayout>
+            <!--빈 모임명-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/plus0222"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="11dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="#191919"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </RelativeLayout>
+        <!--두번째 플러스 끝-->
+
+
+        <!--세번째 item-->
+        <RelativeLayout
+            android:id="@+id/item0333"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:visibility="gone">
+
+            <!--모임 사진-->
+            <RelativeLayout
+                android:id="@+id/llgroupImg0333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_width="66dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/group_default_home"/>
+
+                <ImageView
+                    android:layout_width="66dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/group_default_home"/>
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivGroupImg0333"
+                    android:layout_width="66dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/group_default_home" />
+            </RelativeLayout>
+
+            <!--모임명-->
+            <LinearLayout
+                android:id="@+id/llgroupName0333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llgroupImg0333"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="11dp">
+
+                <TextView
+                    android:id="@+id/tvGroupName0333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="#191919"
+                    android:textSize="11sp"
+                    tools:text="BOUNCE" />
+            </LinearLayout>
+
+            <!--빨간점-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="4dp">>
+
+                <ImageView
+                    android:id="@+id/ivRed0333"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/group_new" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!--세번째 플러스-->
+        <RelativeLayout
+            android:id="@+id/rlPlus0333"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:visibility="gone">
+            <!--플러스 버튼-->
+            <LinearLayout
+                android:id="@+id/plus0333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:src="@drawable/group_plus" />
+            </LinearLayout>
+            <!--빈 모임명-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/plus0333"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="11dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="#191919"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </RelativeLayout>
+        <!--세번째 플러스 끝-->
+
+
+    </RelativeLayout>
+    <!--첫번째줄 끝-->
+
+
+    <!--두 번째 줄-->
+    <RelativeLayout
+        android:layout_width="304dp"
+        android:layout_height="97dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="23dp">
+
+
+        <!--첫번째 item-->
+        <RelativeLayout
+            android:id="@+id/item0444"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+
+            <!--모임 사진-->
+            <RelativeLayout
+                android:id="@+id/llgroupImg0444"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="66dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/group_photo_outline"/>
+
+                <ImageView
+                    android:layout_width="66dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/group_default_home"/>
+
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivGroupImg0444"
+                    android:layout_width="66dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/group_default_home" />
+            </RelativeLayout>
+
+            <!--모임명-->
+            <LinearLayout
+                android:id="@+id/llgroupName0444"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llgroupImg0444"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="11dp">
+
+                <TextView
+                    android:id="@+id/tvGroupName0444"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="#191919"
+                    android:textSize="11sp"
+                    tools:text="SOPT" />
+            </LinearLayout>
+
+            <!--빨간점-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="4dp">
+
+                <ImageView
+                    android:id="@+id/ivRed0444"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/group_new" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <!--네번째 플러스-->
+        <RelativeLayout
+            android:id="@+id/rlPlus0444"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:visibility="gone">
+            <!--플러스 버튼-->
+            <LinearLayout
+                android:id="@+id/plus0444"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:src="@drawable/group_plus" />
+            </LinearLayout>
+            <!--빈 모임명-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/plus0444"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="11dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="#191919"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </RelativeLayout>
+        <!--네번째 플러스 끝-->
+
+
+        <!--두번재 item-->
+        <RelativeLayout
+            android:id="@+id/item0555"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+
+            <!--모임 사진-->
+            <RelativeLayout
+                android:id="@+id/llgroupImg0555"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_alignParentTop="true">
+
+                <ImageView
+                    android:layout_width="66dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/group_default_home"/>
+
+                <ImageView
+                    android:layout_width="66dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/group_default_home"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivGroupImg0555"
+                    android:layout_width="66dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/group_default_home" />
+            </RelativeLayout>
+
+            <!--모임명-->
+            <LinearLayout
+                android:id="@+id/llgroupName0555"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llgroupImg0555"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="11dp">
+
+                <TextView
+                    android:id="@+id/tvGroupName0555"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="#191919"
+                    android:textSize="11sp"
+                    tools:text="BOUNCE" />
+            </LinearLayout>
+
+            <!--빨간점-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="4dp">
+
+                <ImageView
+                    android:id="@+id/ivRed0555"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/group_new" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!--다섯번째 플러스-->
+        <RelativeLayout
+            android:id="@+id/rlPlus0555"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+            <!--플러스 버튼-->
+            <LinearLayout
+                android:id="@+id/plus0555"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:src="@drawable/group_plus" />
+            </LinearLayout>
+            <!--빈 모임명-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/plus0555"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="11dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="#191919"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </RelativeLayout>
+        <!--다섯번째 플러스 끝-->
+
+
+        <!--세번째 item-->
+        <RelativeLayout
+            android:id="@+id/item0666"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:visibility="gone">
+
+            <!--모임 사진-->
+            <RelativeLayout
+                android:id="@+id/llgroupImg0666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="66dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/group_photo_outline"/>
+                <ImageView
+                    android:layout_width="66dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/group_default_home"/>
+
+                <ImageView
+                    android:layout_width="66dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/group_default_home"/>
+
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivGroupImg0666"
+                    android:layout_width="66dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/group_default_home" />
+            </RelativeLayout>
+
+            <!--모임명-->
+            <LinearLayout
+                android:id="@+id/llgroupName0666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llgroupImg0666"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="11dp">
+
+                <TextView
+                    android:id="@+id/tvGroupName0666"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="#191919"
+                    android:textSize="11sp"
+                    tools:text="BOUNCE" />
+            </LinearLayout>
+
+            <!--빨간점-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="4dp">>
+
+                <ImageView
+                    android:id="@+id/ivRed0666"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/group_new" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!--여섯번째 플러스-->
+        <RelativeLayout
+            android:id="@+id/rlPlus0666"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:visibility="gone">
+            <!--플러스 버튼-->
+            <LinearLayout
+                android:id="@+id/plus0666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:src="@drawable/group_plus" />
+            </LinearLayout>
+            <!--빈 모임명-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/plus0666"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="11dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="#191919"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </RelativeLayout>
+        <!--여섯번째 플러스 끝-->
+
+
+    </RelativeLayout>
+    <!--첫번째줄 끝-->
+
+
+</LinearLayout>

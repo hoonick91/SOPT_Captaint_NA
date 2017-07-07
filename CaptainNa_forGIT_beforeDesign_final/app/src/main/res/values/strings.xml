@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">나총무</string>
+
+    <string name="group_name" color="#333333"><font size="14">모임명</font></string>
+    <string name="one_line_intro" color="#333333"><font size="14">모임 한 줄 소개</font></string>
+    <string name="password_insert" color="#333333"><font size="14">비밀 번호 설정(4~6 자리)</font></string>
+    <string name="password_check" color="#333333"><font size="14">비밀 번호 확인</font></string>
+
+
+    <string name="user_name" color="#333333"><font size="14">이름</font></string>
+    <string name="user_email" color="#333333"><font size="14">E-mail</font></string>
+    <string name="user_call" color="#333333"><font size="14">전화번호</font></string>
+    <string name="password_user" color="#333333"><font size="14">비밀번호 설정</font></string>
+    <string name="title_activity_editprofile">EditprofileActivity</string>
+
+    <!-- 행사만들기 -->
+
+    <string name="place"><font size="12">장소</font></string>
+    <string name="money"><font size="12">금액</font></string>
+    <string name="title_activity_edit_event">EditEvent</string>
+
+    <!-- 행사 검색 -->
+    <string name="group_name_search"><font size="13">모임명 검색</font></string>
+
+    <!-- 모임 찾기 비밀번호 팝업 -->
+    <string name="group_pw"><font size="14">모임의 비밀번호를 입력해주세요.</font></string>
+
+    <!-- 로그인-->
+    <string name="user_pw"><font color="#FFFFFF" size="14">Your Password</font></string>
+    <string name="user_id"><font color="#FFFFFF" size="14">Insert your E-mail</font></string>
+    <string name="title_activity_myprivacy">Myprivacy</string>
+
+</resources>

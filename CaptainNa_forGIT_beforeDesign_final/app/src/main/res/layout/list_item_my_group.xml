@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="152dp">
+
+
+    <!--모임 이미지-->
+    <LinearLayout
+        android:id="@+id/llgroupImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="36dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivGroupImg"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            tools:src="@drawable/bluetree"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="36dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/group_default_image"/>
+    </LinearLayout>
+
+
+    <!--모임 설명 수직-->
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="29dp"
+        android:layout_toRightOf="@+id/llgroupImg"
+        android:layout_marginLeft="24dp"
+        android:layout_centerInParent="true">
+
+        <!--모임명-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvGroupName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#191919"
+                android:textStyle="bold"
+                tools:text="SOPT"/>
+        </LinearLayout>
+
+        <!--모임 설명-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp">
+            <TextView
+                android:id="@+id/tvGroupIntro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="#969696"
+                tools:text="수도권 대학생 연합 IT 창업 동아리"/>
+        </LinearLayout>
+
+        <!--모임장 수평-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="3dp">
+            <!--모임장 텍스트-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="#969696"
+                    android:text="모임장 "/>
+            </LinearLayout>
+
+            <!--모임장 이름-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvGroupCaptain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="#969696"
+                    tools:text="박종훈"/>
+            </LinearLayout>
+        </LinearLayout>
+        <!--모임장 수평 끝-->
+
+
+        <!--참가인원 수평-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp">
+
+            <!--참가인원 텍스트-->
+            <LinearLayout
+                android:id="@+id/lljoinNumberTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="#969696"
+                    android:text="참가인원 "/>
+            </LinearLayout>
+
+            <!--참가인원 숫자-->
+            <LinearLayout
+                android:id="@+id/lljoinNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/lljoinNumberTxt"
+                android:layout_alignTop="@+id/lljoinNumberTxt">
+                <TextView
+                    android:id="@+id/tvJoinNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="#969696"
+                    tools:text="135"/>
+            </LinearLayout>
+
+            <!--명 텍스트-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/lljoinNumber"
+                android:layout_alignTop="@+id/lljoinNumber">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="#969696"
+                    android:text="명"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <!--참가인원 수평 끝-->
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llgroupImg"
+        android:layout_marginTop="32dp"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/group_search_line"/>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

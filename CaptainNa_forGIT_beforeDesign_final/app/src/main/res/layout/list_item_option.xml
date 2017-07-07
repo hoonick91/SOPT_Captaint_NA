@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp">
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="42dp"
+    android:background="@drawable/payment_blank"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true">
+
+    <TextView
+        android:id="@+id/optionNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="n차"
+        android:layout_weight="3"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal"
+        android:textColor="#b2b2b2"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_weight="5"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+        
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_weight="1"/>
+        
+        <TextView
+            android:id="@+id/optionContent"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:text="자세 칵테일바"
+            android:textColor="#b2b2b2"/>
+    </LinearLayout>
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_weight="2">
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8000"
+        android:textColor="#b2b2b2"/>
+    <TextView
+        android:id="@+id/won"
+        android:layout_alignTop="@+id/price"
+        android:layout_toRightOf="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="원"
+        android:textColor="#b2b2b2"/>
+
+
+
+</RelativeLayout>
+
+
+
+    <ImageView
+        android:id="@+id/optionCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal"
+        android:src="@drawable/event_check2"
+        android:layout_weight="1"
+        android:layout_marginRight="10dp"/>
+
+</LinearLayout>
+</RelativeLayout>

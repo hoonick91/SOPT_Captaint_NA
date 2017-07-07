@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        sothree:umanoDragView="@+id/dragView"
+        sothree:umanoOverlay="true"
+        sothree:umanoPanelHeight="0dp"
+        sothree:umanoParalaxOffset="0dp"
+        sothree:umanoShadowHeight="4dp">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <!--툴바-->
+            <include
+                android:id="@+id/tbList"
+                layout="@layout/tool_bar_event_detail" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <!--이벤트 이미지-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ivEventImg"
+                        android:layout_width="360dp"
+                        android:layout_height="180dp"
+                        android:scaleType="fitXY"
+                        tools:src="@drawable/event_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="360dp"
+                        android:layout_height="180dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/event_default" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+            <!--모임 이미지, 모임 이름 수평 시작-->
+            <LinearLayout
+                android:layout_width="305dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+                <!--모임 이미지-->
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivGroupImg"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        tools:src="@drawable/group_default_home" />
+                </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:src="@drawable/group_default_home" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+
+
+
+                    <!--모임 이름-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="3dp">
+
+                        <TextView
+                            android:id="@+id/tvGroupName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#969696"
+                            android:textSize="10sp"
+                            tools:text="SOPT" />
+                    </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+            <!--모임 이미지, 모임 이름, 공유 수평 끝-->
+
+
+            <!--이벤트 이름, 작성자 수평 시작-->
+            <LinearLayout
+                android:layout_width="305dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp">
+                <!--이벤트 이름-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvEventName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#2d2d2d"
+                        android:textSize="21sp"
+                        tools:text="Home Coming Day" />
+                </LinearLayout>
+
+                <!--작성자 텍스트-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="7dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="총무 : "
+                        android:textColor="#afafaf"
+                        android:textSize="9sp" />
+                </LinearLayout>
+
+                <!--실제 작성자-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom">
+
+                    <TextView
+                        android:id="@+id/tvEventMaker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#afafaf"
+                        android:textSize="9sp"
+                        tools:text="Ko Jun Hee" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--이벤트 이름, 작성자 수평 끝-->
+
+
+            <!--line, 설명 수평 시작-->
+            <LinearLayout
+                android:layout_width="305dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <!--구분선-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/event_info_line" />
+                </LinearLayout>
+
+
+                <!--상세 설명-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:id="@+id/tvEventIntro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="9sp"
+                        android:textColor="#7a7a7a"
+                        android:textSize="13sp"
+                        tools:text="솝트의 이전 기수 사람들과 새로운 관계를 형성해보세요!
+드레스 코드를 가장 잘 맞춰 오시는 분께는
+특별한 선물을 드립니다.
+이태원 루프탑에서 우아한 분위기를 즐겨보세요." />
+                </LinearLayout>
+            </LinearLayout>
+            <!--line, 설명 수평 끝-->
+
+
+            <!--일시 장소 금액 차후행사 수직-->
+            <LinearLayout
+                android:id="@+id/llEventInfo"
+                android:layout_width="298dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="9dp"
+                android:background="#F8F8F8"
+                android:orientation="vertical">
+
+                <!--일시 텍스트 수평 시작-->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <!--일시 텍스트-->
+                    <LinearLayout
+                        android:id="@+id/lldateTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="일시"
+                            android:textColor="#638da6"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <!--실제 일시-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_toRightOf="@+id/lldateTxt">
+                        <TextView
+                            android:id="@+id/tvEventDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#6d6d6d"
+                            android:textSize="13sp"
+                            tools:text="2017. 06. 17. 19:00" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <!--일시 텍스트 수평 끝-->
+
+
+                <!--구분선-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/line_detail_event" />
+                </LinearLayout>
+
+
+                <!--시간 텍스트 수평 시작-->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginTop="5dp">
+
+                    <!--시간 텍스트-->
+                    <LinearLayout
+                        android:id="@+id/llPlaceTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:textColor="#638da6"
+                            android:text="장소" />
+                    </LinearLayout>
+
+
+                    <!--실제 시간-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_toRightOf="@+id/llPlaceTxt">
+
+                        <TextView
+                            android:id="@+id/tvEventPlace"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#6d6d6d"
+                            android:textSize="13sp"
+                            tools:text="이태원 루프탑" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <!--시간 텍스트 수평 끝-->
+
+
+                <!--구분선-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/line_detail_event" />
+                </LinearLayout>
+
+
+                <!--금액 텍스트 수평 시작-->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <!--금액 텍스트-->
+                    <LinearLayout
+                        android:id="@+id/llmoneyTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#638da6"
+                            android:textSize="15sp"
+                            android:text="금액" />
+                    </LinearLayout>
+
+
+                    <!--실제 금액-->
+                    <LinearLayout
+                        android:id="@+id/llmoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_toRightOf="@+id/llmoneyTxt">
+
+                        <TextView
+                            android:id="@+id/tvEventMoney"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#6d6d6d"
+                            android:textSize="13sp"
+                            tools:text="8,000" />
+                    </LinearLayout>
+
+                    <!--원-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/llmoney">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="원"
+                            android:textColor="#6d6d6d"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <!--금액 텍스트 수평 끝-->
+
+
+                <!--구분선-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/line_detail_event" />
+                </LinearLayout>
+
+
+                <!--차후 행사 수평 시작-->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal">
+
+                    <!--차후행사 텍스트-->
+                    <LinearLayout
+                        android:id="@+id/llafterEventsTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#638da6"
+                            android:textSize="15sp"
+                            android:text="차후행사" />
+                    </LinearLayout>
+
+                    <!--차후 행사 1차-->
+                    <LinearLayout
+                        android:id="@+id/llafterEvent01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_toRightOf="@+id/llafterEventsTxt">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/after_event_1" />
+                    </LinearLayout>
+
+                    <!--차후 행사 2차-->
+                    <LinearLayout
+                        android:id="@+id/llafterEvent02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@+id/llafterEvent01">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/after_event_2" />
+                    </LinearLayout>
+
+                    <!--차후 행사 3차-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@+id/llafterEvent02">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/after_event_3" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+                <!--금액 텍스트 수평 끝-->
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llapply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/llEventInfo"
+                android:layout_marginTop="38dp">
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <!-- SLIDING LAYOUT -->
+        <RelativeLayout
+            android:id="@+id/dragView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:background="@drawable/payment1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="37dp"
+                android:layout_width="305dp"
+                android:layout_height="42dp"
+                android:id="@+id/titleList"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/payment_blank">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="행사"
+                    android:layout_weight="3"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_horizontal"
+                    android:textColor="#638da6"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="5"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/optionContent_title"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10"
+                        android:textColor="#638da6"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:id="@+id/price_title"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8000"
+                        android:textColor="#638da6"/>
+
+                    <TextView
+                        android:layout_alignTop="@+id/price_title"
+                        android:layout_toRightOf="@+id/price_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="원"
+                        android:textColor="#638da6"/>
+
+                </RelativeLayout>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/event_check1"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_below="@id/titleList"
+                android:id="@+id/rvOptions"
+                android:layout_marginTop="3dp"
+                android:layout_width="305dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rvOptions"
+                android:layout_toLeftOf="@+id/priceSum"
+                android:text="합계 : "
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/priceSum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rvOptions"
+                android:layout_toLeftOf="@+id/won"
+                android:text="0"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/won"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/rvOptions"
+                android:layout_below="@+id/rvOptions"
+                android:layout_marginBottom="71dp"
+                android:text="원"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+    
+    
+
+
+    <ImageButton
+        android:id="@+id/ibApply"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="19dp"
+        android:background="@drawable/participate_button"/>
+
+
+    <ImageButton
+        android:id="@+id/checkPay"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/ibApply"
+        android:layout_width="150dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="19dp"
+        android:visibility="invisible"
+        android:background="@drawable/payment_check_button"/>
+
+    <ImageButton
+        android:id="@+id/cancelPar"
+        android:layout_alignRight="@+id/ibApply"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/checkPay"
+        android:layout_width="150dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="19dp"
+        android:visibility="invisible"
+        android:background="@drawable/participate_cancel_button"/>
+</RelativeLayout>

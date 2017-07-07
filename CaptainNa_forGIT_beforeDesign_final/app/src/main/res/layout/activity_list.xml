@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!--툴바-->
+    <include
+        android:id="@+id/tbList"
+        layout="@layout/tool_bar_list" />
+
+    <!--툴바 밑에-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_below="@+id/tbList"
+        android:id="@+id/linearLayout4">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:src="@drawable/layout_actionbar_under" />
+    </LinearLayout>
+
+<LinearLayout
+    android:id="@+id/llup"
+    android:layout_width="match_parent"
+    android:layout_height="122dp"
+    android:orientation="horizontal"
+    android:background="#FFFFFF"
+    android:layout_below="@+id/linearLayout4">
+    <!--상단 시작-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="122dp">
+
+
+        <!--모임 이미지-->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="17dp">
+
+            <ImageView
+                android:layout_width="79dp"
+                android:layout_height="79dp"
+                android:src="@drawable/group_default_home"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivTopGroup"
+                android:layout_width="79dp"
+                android:layout_height="79dp"
+                tools:src="@drawable/group_default_home" />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="23dp"
+            android:orientation="vertical">
+
+
+            <!--모임 이름, 왕관이미지 수평-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--모임 이름-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvGroupName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#191919"
+                        android:textSize="18sp"
+                        tools:text="SOPT" />
+                </LinearLayout>
+
+                <!--왕관 이미지-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@+id/llgroupName">
+
+                    <ImageView
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_event_list_groupmaster" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--모임 이름, 왕관이미지 수평 끝-->
+
+            <!--모임 설명-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp">
+
+                <TextView
+                    android:id="@+id/tvGroupIntro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#969696"
+                    android:textSize="10sp"
+                    tools:text="수도권 대학생 연합 IT 창업 동아리" />
+            </LinearLayout>
+
+            <!--모임장 수평-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
+
+                <!--모임장 텍스트-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="모임장  "
+                        android:textColor="#969696"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <!--실제 모임장-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/chairman_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#969696"
+                        android:textSize="10sp"
+                        tools:text="박종훈" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--참가 인원 수평-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
+
+                <!--참가인원 텍스트-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="참가 인원 "
+                        android:textColor="#638da6"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+
+                <!--인원수-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:id="@+id/tvJoinNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#638da6"
+                        android:textSize="10sp"
+                        tools:text="193" />
+                </LinearLayout>
+
+
+                <!--명 텍스트-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="명"
+                        android:textColor="#638da6"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--참가 인원 수평 끝-->
+        </LinearLayout>
+    </LinearLayout>
+
+
+        <!--수정하기 버튼-->
+
+    </LinearLayout>
+    <!--상단 끝-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="50dp">
+
+        <LinearLayout
+            android:id="@+id/llchangeButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginRight="30dp"
+
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_event_list_edit" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <!--행사 만들기-->
+    <LinearLayout
+        android:id="@+id/llregisterButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llup"
+        android:background="@drawable/event_list_bar">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="22dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/make_event_button" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--하단 모임 리스트-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llregisterButton"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvEvents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</RelativeLayout>

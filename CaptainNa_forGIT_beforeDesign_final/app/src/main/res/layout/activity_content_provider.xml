@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/tb_content_provide"
+        layout="@layout/tool_bar_content_porvider" />
+
+    <LinearLayout
+        android:id="@+id/searchbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tb_content_provide"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="19dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/participant_search" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/tb_content_provide"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="26dp">
+
+        <EditText
+            android:id="@+id/search_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="이름, 전화번호 검색"
+            android:singleLine="true"
+            android:lines="1"
+            android:textCursorDrawable="@null"
+            android:textSize="14sp"
+            android:textColorHint="#b6b6b6"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchbox">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/subrecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/findGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="243dp">
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:src="@drawable/search_group_button"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/addGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/findGroup">
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="71dp"
+            android:src="@drawable/make_group_button"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

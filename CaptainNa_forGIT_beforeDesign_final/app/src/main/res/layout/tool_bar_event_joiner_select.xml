@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="89dp"
+    android:background="@drawable/actionbar_selecte"
+    android:id="@+id/tb_event_joiner_select">
+
+    <!--뒤로가기 버튼-->
+    <LinearLayout
+        android:id="@+id/backbtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_back" />
+    </LinearLayout>
+
+    <!--휴지통 버튼-->
+    <LinearLayout
+        android:id="@+id/deletebtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_trashcan" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/choicebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp">
+        <ImageView
+            android:id="@+id/choiceimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/participant_all_check1"/>
+        <TextView
+            android:id="@+id/choicetxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="6dp"
+            android:text="전체 선택" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_marginRight="14dp"
+        android:layout_alignParentRight="true">
+        <TextView
+            android:id="@+id/sendbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+</RelativeLayout>

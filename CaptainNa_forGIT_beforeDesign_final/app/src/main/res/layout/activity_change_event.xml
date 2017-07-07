@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!--툴바-->
+    <include
+        android:id="@+id/tbHome"
+        layout="@layout/tool_bar_change_event" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--툴바 밑에-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tool_bar_make_event">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/layout_actionbar_under" />
+            </LinearLayout>
+
+            <!--사진 추가 부분 시작-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="179dp">
+                <!--사진추가 이미지-->
+                <ImageView
+                    android:id="@+id/ivAddImg_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/event_box" />
+            </RelativeLayout>
+            <!--사진 추가 부분 끝-->
+
+
+            <!--중간 빈 부분 시작-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/layout_cuttingbar" />
+            </LinearLayout>
+            <!--중간 빈 부분 끝-->
+
+
+            <!--하단 부분 시작-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--행사이름 텍스트-->
+                <LinearLayout
+                    android:id="@+id/lleventName_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="21dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="행사이름"
+                        android:textColor="#777777"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!--행사 이름 입력 부분-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="44dp"
+                    android:layout_marginTop="7dp">
+
+                    <EditText
+                        android:id="@+id/etEventName_edit"
+                        android:layout_width="275dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/long_text_box"
+                        android:paddingLeft="10dp"
+                        android:textCursorDrawable="@null"
+                        android:singleLine="true"
+                        android:lines="1"/>
+                </LinearLayout>
+
+
+                <!--행사 내용, 글자수 제한-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="29dp"
+                    android:orientation="horizontal">
+
+                    <!--행사 내용 텍스트-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="행사 내용"
+                            android:textColor="#777777"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <!--글자수 제한-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(200자 이내)"
+                            android:textSize="10dp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--행사 내용, 글자수 제한 끝-->
+
+                <!--행사 내용 입력 부분-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="44dp"
+                    android:layout_marginTop="7dp">
+
+                    <EditText
+                        android:id="@+id/etEventContents_edit"
+                        android:layout_width="275dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/long_text_box"
+                        android:paddingLeft="10dp"
+                        android:textCursorDrawable="@null"
+                        android:maxLength="200"/>
+                </LinearLayout>
+
+
+                <!--행사 일시 텍스트-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="29dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="행사일시" />
+                </LinearLayout>
+
+                <!--일정 설정 수평 시작-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="44dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <!--언제부터-->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/fromWhen"
+                            android:layout_width="126dp"
+                            android:layout_height="57dp"
+                            android:src="@drawable/event_day_box1" />
+
+                        <TextView
+                            android:id="@+id/choosefromday_edit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="10dp"
+                            android:text="2017년6월20일"
+                            android:textColor="#ffffff"
+                            android:textSize="11dp"/>
+
+                        <TextView
+                            android:id="@+id/choosefromtime_edit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/choosefromday_edit"
+                            android:layout_centerInParent="true"
+                            android:text="오후 6:30"
+                            android:textColor="#ffffff"
+                            android:textSize="16dp"/>
+
+                    </RelativeLayout>
+
+                    <!--가운데 물결-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/event_day" />
+                    </LinearLayout>
+
+
+                    <!--언제까지-->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp">
+
+                        <ImageView
+                            android:id="@+id/toWhen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/event_day_box2" />
+
+                        <TextView
+                            android:id="@+id/choosetoday_edit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="10dp"
+                            android:text="2017년6월20일"
+                            android:textSize="11dp"/>
+
+                        <TextView
+                            android:id="@+id/choosetotime_edit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/choosetoday_edit"
+                            android:layout_centerInParent="true"
+                            android:text="오후 6:30"
+                            android:textSize="16dp"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+                <!--일정 설정 수평 끝-->
+
+                <!--행사장소 행사 금액 수평 시작-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="29dp"
+                    android:orientation="horizontal">
+
+                    <!--행사장소 vertical-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <!--행사 장소 텍스트-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="행사 장소"
+                                android:textColor="#777777"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <!--행사 장소 입력 부분-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp">
+
+                            <EditText
+                                android:id="@+id/etEventPlace_edit"
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/event_text_box"
+                                android:lines="1"
+                                android:paddingLeft="10dp"
+                                android:singleLine="true"
+                                android:textCursorDrawable="@null" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--행사 장소 vertical 끝-->
+
+
+                    <!--행사장소 vertical-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:orientation="vertical">
+
+                        <!--행사 금액 텍스트-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="행사 금액"
+                                android:textColor="#777777"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <!--금액 입력 부분-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp">
+
+                            <EditText
+                                android:id="@+id/etEventMoney_edit"
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/event_price_text_box"
+                                android:paddingLeft="10dp"
+                                android:textCursorDrawable="@null"
+                                android:singleLine="true"
+                                android:lines="1"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--행사 금액 vertical 끝-->
+                </LinearLayout>
+                <!--행사장소 행사 금액 수평 끝-->
+
+
+                <!--구분선-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="29dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/long_line" />
+                </LinearLayout>
+
+
+                <!--뒤풀이 텍스트-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="29dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="차후 행사"
+                        android:textColor="#777777"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+                <!--1차 정보 입력-->
+                <LinearLayout
+                    android:layout_width="330dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="47dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical">
+                    <!--수평 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!--1차 텍스트-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:letterSpacing="0.04"
+                                android:text="1차"
+                                android:textColor="#424242"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <!--뒤풀이 장소 입력 부분-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp">
+
+                            <EditText
+                                android:id="@+id/etFirstPartyPlace_edit"
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/after_event_text_box"
+                                android:hint="@string/place"
+                                android:paddingLeft="10dp"
+                                android:textCursorDrawable="@null"
+                                android:singleLine="true"
+                                android:lines="1"/>
+                        </LinearLayout>
+
+                        <!--뒤풀이 금액 입력부분-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp">
+
+                            <EditText
+                                android:id="@+id/etFirstPartyMoney_edit"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/after_event_price_text_box"
+                                android:hint="@string/money"
+                                android:paddingLeft="10dp"
+                                android:textCursorDrawable="@null"
+                                android:singleLine="true"
+                                android:lines="1"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--1차 뒤풀이 정보 입력부분 수평 -->
+
+                    <!--구분선-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/short_line" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <!--1차 정보 입력 끝-->
+
+
+                <!--2차 정보 입력-->
+                <LinearLayout
+                    android:id="@+id/llsecondParty_edit"
+                    android:layout_width="330dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="47dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <!--수평 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!--2차 텍스트-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:letterSpacing="0.04"
+                                android:text="2차"
+                                android:textColor="#424242"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <!--뒤풀이 장소 입력 부분-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp">
+
+                            <EditText
+                                android:id="@+id/etSecondPartyPlace_edit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/after_event_text_box"
+                                android:hint="@string/place"
+                                android:paddingLeft="10dp"
+                                android:textCursorDrawable="@null"/>
+                        </LinearLayout>
+
+                        <!--뒤풀이 금액 입력부분-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp">
+
+                            <EditText
+                                android:id="@+id/etSecondPartyMoney_edit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/after_event_price_text_box"
+                                android:hint="@string/money"
+                                android:paddingLeft="10dp"
+                                android:textCursorDrawable="@null"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--2차 뒤풀이 정보 입력부분 수평 -->
+
+                    <!--구분선-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/short_line" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--2차 정보 입력 끝-->
+
+
+                <!--3차 정보 입력-->
+                <LinearLayout
+                    android:id="@+id/llthirdParty_edit"
+                    android:layout_width="330dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="47dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <!--수평 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!--3차 텍스트-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:letterSpacing="0.04"
+                                android:text="3차"
+                                android:textColor="#424242"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <!--뒤풀이 장소 입력 부분-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp">
+
+                            <EditText
+                                android:id="@+id/etThirdPartyPlace_edit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/after_event_text_box"
+                                android:hint="@string/place"
+                                android:paddingLeft="10dp"
+                                android:textCursorDrawable="@null"/>
+                        </LinearLayout>
+
+                        <!--뒤풀이 금액 입력부분-->
+
+                        <!--뒤풀이 장소 입력 부분-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp">
+
+                            <EditText
+                                android:id="@+id/etThirdPartyMoney_edit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/after_event_price_text_box"
+                                android:hint="@string/money"
+                                android:paddingLeft="10dp"
+                                android:textCursorDrawable="@null"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--3차 뒤풀이 정보 입력부분 수평 -->
+
+                    <!--구분선-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/short_line" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--3차 정보 입력 끝-->
+
+
+                <!--차수 추가하기 버튼-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="7dp">
+
+                    <ImageView
+                        android:id="@+id/ivAddParty_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/after_event_plus" />
+                </LinearLayout>
+
+
+                <!--최종 행사삭제하기 버튼-->
+                <LinearLayout
+                    android:id="@+id/linearLayout_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="27dp"
+                    android:background="@drawable/layout_delet">
+
+                    <LinearLayout
+                        android:id="@+id/llGroupDelete_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="33dp"
+                        android:layout_marginTop="18dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="#aa0d00"
+                            android:text="행사 삭제"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--하단 부분 끝-->
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

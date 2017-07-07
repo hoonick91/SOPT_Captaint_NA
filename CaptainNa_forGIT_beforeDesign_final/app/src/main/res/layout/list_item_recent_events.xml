@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="17dp">
+        <ImageView
+
+            android:layout_width="62dp"
+            android:layout_height="87dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/event_default_list"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="17dp">
+        <ImageView
+
+            android:layout_width="62dp"
+            android:layout_height="87dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/latestevent_photoline"/>
+    </LinearLayout>
+
+    <!--모임 이미지-->
+    <LinearLayout
+        android:id="@+id/llgroupImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="1dp">
+        <ImageView
+            android:id="@+id/ivEvent"
+            android:layout_width="62dp"
+            android:layout_height="87dp"
+            android:scaleType="fitXY"
+            tools:src="@drawable/greentree" />
+
+
+    </LinearLayout>
+
+
+
+
+    <!--이름, 장소, 시간, 금액 수직 시작-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:orientation="vertical"
+        android:layout_alignTop="@+id/llgroupImg"
+        android:layout_toRightOf="@+id/llgroupImg"
+        android:layout_toEndOf="@+id/llgroupImg"
+        android:layout_marginStart="22dp">
+
+
+        <!--이벤트 이름-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvEventName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#2d2d2d"
+                android:textSize="15sp"
+                tools:text="홈 커밍 데이" />
+        </LinearLayout>
+
+        <!--모임 이름-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:id="@+id/tvGroupName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="#757575"
+                tools:text="SOPT"/>
+        </LinearLayout>
+
+        <!--일시 수평 시작-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+
+            <!--일시 텍스트-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="#638da6"
+                    android:text="일시 " />
+            </LinearLayout>
+
+            <!--실제 일시-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvEventDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#969696"
+                    android:textSize="10sp"
+                    tools:text="2017.06.17" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--일시 수평 끝-->
+
+
+        <!--장소 수평 시작-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <!--장소 텍스트-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="#638da6"
+                    android:text="장소 " />
+            </LinearLayout>
+
+            <!--실제 장소-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvEventPlace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="#969696"
+                    tools:text="이태원 루프탑"/>
+            </LinearLayout>
+        </LinearLayout>
+        <!--시간 수평 끝-->
+
+
+        <!--금액 수평 시작-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <!--금액 텍스트-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="#638da6"
+                    android:text="금액 " />
+            </LinearLayout>
+
+            <!--실제 금액-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvEventMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="#969696"
+                    tools:text="5000"/>
+            </LinearLayout>
+
+            <!--원-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="#969696"
+                    android:text="원"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--금액 수평 끝-->
+    </LinearLayout>
+    <!--이름, 일자, 장소 , 금액 수직 끝-->
+
+
+    <!--구분선-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="2dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/latestevent_bar"/>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

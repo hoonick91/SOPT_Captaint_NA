@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="135dp"
+    android:background="@drawable/actionbar_group_search">
+
+    <!--뒤로가기-->
+    <LinearLayout
+        android:id="@+id/back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_back"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="27dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/group_search"
+            android:layout_marginTop="85dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="90dp">
+        <EditText
+            android:id="@+id/etSearchGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="모임명 검색"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:background="@null"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

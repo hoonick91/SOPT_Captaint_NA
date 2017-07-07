@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+
+    <!--툴바-->
+    <include
+        android:id="@+id/tbMakeGroup"
+        layout="@layout/tool_bar_join" />
+
+
+
+
+    <!--그룹 이미지-->
+    <LinearLayout
+        android:id="@+id/llgroupImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="93dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImg"
+            android:layout_width="107dp"
+            android:layout_height="107dp"
+            android:src="@drawable/user_default_image" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="93dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="107dp"
+            android:layout_height="107dp"
+            android:src="@drawable/group_photo_outline" />
+    </LinearLayout>
+
+    <!--그룹 이미지 등록하기-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="203dp"
+        android:layout_marginTop="90dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivRegisterImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/icon_group_photo" />
+    </LinearLayout>
+
+
+    <!--정보 입력 수직-->
+    <LinearLayout
+        android:id="@+id/llinfoEnter"
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:orientation="vertical">
+
+        <!--모임명 수평-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--이미지01-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/user_name" />
+            </LinearLayout>
+
+            <!--모임명 입력-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/user_name"
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="24dp"
+                    android:background="@null"
+                    android:hint="@string/user_name"
+                    android:lines="1"
+                    android:singleLine="true"
+
+                    android:textCursorDrawable="@null" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--모임명 수평 끝-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/make_group_line" />
+        </LinearLayout>
+
+
+        <!--모임 한 줄 소개 수평-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:orientation="horizontal">
+
+            <!--이미지02-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:src="@drawable/user_mail" />
+            </LinearLayout>
+
+            <!--모임 한줄 소개 입력-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/user_email"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:background="@null"
+                    android:hint="@string/user_email"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:inputType="textUri"
+
+                    android:textCursorDrawable="@null" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--모임 한줄 소개 수평 끝-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/make_group_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:orientation="horizontal">
+
+            <!--이미지02-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:src="@drawable/user_call" />
+            </LinearLayout>
+
+            <!--모임 한줄 소개 입력-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/user_phone"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:background="@null"
+                    android:hint="@string/user_call"
+                    android:inputType="phone"
+                    android:lines="1"
+                    android:singleLine="true"
+
+                    android:textCursorDrawable="@null" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--모임 한줄 소개 수평 끝-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/make_group_line" />
+        </LinearLayout>
+
+
+        <!--비밀번호 소개 수평-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:orientation="horizontal">
+
+            <!--이미지02-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/make_group_img03" />
+            </LinearLayout>
+
+            <!--모임 한줄 소개 입력-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etPwdSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:background="@null"
+                    android:hint="@string/password_user"
+                    android:lines="1"
+                    android:maxLength="6"
+                    android:singleLine="true"
+
+                    android:textCursorDrawable="@null" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--모임 한줄 소개 수평 끝-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/make_group_line" />
+        </LinearLayout>
+
+
+        <!--비밀번호 확인 수평-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:orientation="horizontal">
+
+            <!--이미지02-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/make_group_img03" />
+            </LinearLayout>
+
+            <!--모임 한줄 소개 입력-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etPwdCheck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:background="@null"
+                    android:hint="@string/password_check"
+                    android:lines="1"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@null" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--비밀번호 확인 수평 끝-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/make_group_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@+id/etPwdCheck"
+            android:layout_marginTop="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="회원가입하시면 이용약관 및 "
+                android:textSize="9sp"/>
+
+            <TextView
+                android:id="@+id/myprivacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="개인정보 처리방침"
+                android:textStyle="italic"
+                android:textSize="9sp"
+                android:textColor="#3F51B5"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="에 대해 동의하시게 됩니다."
+                android:textSize="9sp"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--정보 입력 수직 끝-->
+
+
+
+
+
+
+
+
+    <!--등록하기-->
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp">
+
+        <ImageButton
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/regist_button1" />
+    </LinearLayout>
+
+</RelativeLayout>

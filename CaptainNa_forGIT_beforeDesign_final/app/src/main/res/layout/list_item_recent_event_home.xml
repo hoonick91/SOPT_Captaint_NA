@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pageId"
+    android:layout_width="241dp"
+    android:layout_height="197dp"
+    android:orientation="vertical"
+    android:background="@drawable/layout_home_eventbox">
+
+    <!--행사 이미지-->
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="126dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/ivEvent"
+                android:layout_width="242dp"
+                android:layout_height="125dp"
+                tools:src="@drawable/home_event_default"
+                android:scaleType="fitXY"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="242dp"
+                android:layout_height="125dp"
+                android:src="@drawable/home_event_default"
+                android:scaleType="fitXY"/>
+        </LinearLayout>
+
+
+
+</FrameLayout>
+
+    <!--모임명-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+            <TextView
+                android:id="@+id/tvGroupName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="#969696"
+                tools:text="SOPT"
+                />
+        </LinearLayout>
+
+    <!--행사명-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="3dp"
+            >
+            <TextView
+                android:id="@+id/tvEventName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#2d2d2d"
+                tools:text="홈 커밍 데이"
+                />
+        </LinearLayout>
+
+    <!--행사 설명-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="1dp">
+            <TextView
+                android:id="@+id/tvEventIntro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textColor="#969696"
+                tools:text="솝트의 이전 기수 사람들과 새로운 관계를 형성해보세요! ..."
+                android:singleLine="true"
+                android:ellipsize="end"
+                />
+        </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>
+
